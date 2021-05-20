@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_vehicel_reserve_add,vehicel.reserve,fleet_reservation.model_vehicel_reserve,group_vehicel_reserve_add,1,0,1,0
+access_vehicel_reserve_edit,vehicel.reserve,fleet_reservation.model_vehicel_reserve,group_vehicel_reserve_edit,1,1,1,0
+access_vehicel_reserve_delete,vehicel.reserve,fleet_reservation.model_vehicel_reserve,group_vehicel_reserve_delete,1,1,1,1

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ <record id="view_form_vichel_reservation" model="ir.ui.view">
+     <field name="name">view.form.vichel.reservation</field>
+     <field name="model">vehicel.reserve</field>
+     <field name="arch" type="xml">
+         <form string="Vehicel Reservation">
+           <sheet>
+             <group>
+               <field name ="name"/>
+               <field name="datefrom"/>
+               <field name="dateto"/>
+           </group>
+         </sheet>
+         </form>
+     </field>
+ </record>
+
+ <record id="view_tree_vichel_reservation" model="ir.ui.view">
+     <field name="name">view.tree.vichel.reservation</field>
+     <field name="model">vehicel.reserve</field>
+     <field name="arch" type="xml">
+         <tree string="Vehicel Reservation">
+           <field name ="name"/>
+           <field name="datefrom"/>
+           <field name="dateto"/>
+           <field name="attendances"/>
+           <field name="duration"/>
+
+
+
+         </tree>
+     </field>
+ </record>
+
+
+ <record id="action_fleet_vehicel_reservation" model="ir.actions.act_window">
+     <field name="name">Vehicle Reservation</field>
+     <field name="type">ir.actions.act_window</field>
+     <field name="res_model">vehicel.reserve</field>
+     <field name="view_mode">tree,form</field>
+ </record>
+
+
+ <menuitem id="fleet_vehicel_reservation" name="Vehicle Reservation" parent="fleet.fleet_vehicles" sequence="10" groups="base.group_system" action="action_fleet_vehicel_reservation"/>
+
+
+
+
+
+
+
+</odoo>

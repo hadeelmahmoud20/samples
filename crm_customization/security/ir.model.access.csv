@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_sale_survey_add,sale.survey,crm_customization.model_sale_survey,group_sale_survey_add,1,0,1,0

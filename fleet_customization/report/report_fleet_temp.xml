@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+  <template id="report_vehicel_form_report_2">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="web.external_layout">
+              <div>
+                <h2 style="text-align: center">vehicle Check Report</h2>
+              </div>
+                <div class="page">
+                    <h2>vehicle Info</h2>
+                    <div class="row mt32">
+                        <div class="col-3">
+                            <strong>vehicle model</strong>
+                            <p t-esc="o.vehicel_model"/>
+                        </div>
+
+                        <div class="col-3">
+                            <strong>vehicle licence</strong>
+                            <p t-esc="o.licence"/>
+                        </div>
+                        <div class="col-3">
+                            <strong>vehicle chassisnumber</strong>
+                            <p t-esc="o.chassisnumber"/>
+                        </div>
+                        </div>
+                        <!-- <br>
+                        <br> -->
+                        <div class="row mt32">
+                        <div class="col-3">
+                            <strong>vehicle color</strong>
+                            <p t-esc="o.color"/>
+                        </div>
+                        <div class="col-3">
+                            <strong>vehicle driver</strong>
+                            <p t-esc="o.driver"/>
+                        </div>
+                      </div>
+
+
+
+
+            <div>
+              <h2>Vehicle parts grid </h2>
+
+            <table class="table table-condensed" >
+
+            <thead>
+            <tr>
+            <th class="text-right">SN</th>
+            <th class="text-right">Name</th>
+            <th class="text-right">Cheecked(Yes/No)</th>
+            <th class="text-right">Description</th>
+            </tr>
+            </thead>
+
+            <tbody class="sale_tbody">
+
+            <tr t-foreach="o.part_grid" t-as="l">
+
+            <td class="text-center">
+            <span t-esc="l.serial"/>
+            </td>
+            <td class="text-center">
+            <span t-esc="l.name1"/>
+            </td>
+            <td class="text-center">
+            <span  t-esc="l.check_box"/>
+            </td>
+            <td class="text-center">
+            <span t-esc="l.description"/>
+            </td>
+
+
+
+            </tr>
+
+            </tbody>
+          </table>
+          </div>
+
+                        <div>
+                         <h2>Contact Info</h2>
+                        <div class="row mt32">
+                            <div class="col-3">
+                                <strong>User</strong>
+                                <p t-esc="o.created_user"/>
+                            </div>
+                            <div class="col-3">
+                                <strong>Date</strong>
+                                <p t-esc="o.check_date"/>
+                            </div>
+                            <div class="col-3">
+                                <strong>Signature</strong>
+                                <p t-esc="o.signature"/>
+                            </div>
+                            </div>
+                          </div>
+
+
+
+
+
+                </div>
+            </t>
+        </t>
+    </t>
+</template>
+
+</odoo>

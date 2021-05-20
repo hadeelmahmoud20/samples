@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_vehicel_part_add,vehicel.part,fleet_customization.model_vehicel_part,group_vehicel_part_add,1,0,1,0
+access_vehicel_part_edit,vehicel.part,fleet_customization.model_vehicel_part,group_vehicel_part_edit,1,1,1,0
+access_vehicel_part_delete,vehicel.part,fleet_customization.model_vehicel_part,group_vehicel_part_delete,1,1,1,1
+
+access_check_form_add,check.form,fleet_customization.model_check_form,group_check_form_add,1,0,1,0
+access_check_form_edit,check.form,fleet_customization.model_check_form,group_check_form_edit,1,1,1,0
+access_check_form_delete,check.form,fleet_customization.model_check_form,group_check_form_delete,1,1,1,1

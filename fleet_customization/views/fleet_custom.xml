@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_form_part" model="ir.ui.view">
+      <field name="name">view.form.part</field>
+      <field name="model">vehicel.part</field>
+      <field name="arch" type="xml">
+          <form string="vehicle partss">
+            <sheet>
+            <group>
+              <field name ="part"/>
+              <field name ="name"/>
+              <field name ="rank"/>
+            </group>
+            </sheet>
+          </form>
+      </field>
+  </record>
+
+  <record id="view_fleet_part" model="ir.ui.view">
+      <field name="name">view.fleet.part</field>
+      <field name="model">vehicel.part</field>
+      <field name="arch" type="xml">
+          <tree string="vehicle parts" default_order="rank asc">
+            <field name ="part"/>
+            <field name ="name"/>
+            <field name ="rank"/>
+          </tree>
+      </field>
+  </record>
+
+
+  <record id="action_fleet_custom_part" model="ir.actions.act_window">
+      <field name="name">Vehicle Parts</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">vehicel.part</field>
+      <field name="view_mode">tree,form</field>
+  </record>
+
+
+  <menuitem id="fleet_parts" name="Vehicle Parts" parent="fleet.fleet_configuration" sequence="100" groups="base.group_system" action="action_fleet_custom_part"/>
+ <!-- ........................................... -->
+ <record id="view_form_check" model="ir.ui.view">
+     <field name="name">view.form.check</field>
+     <field name="model">check.form</field>
+     <field name="arch" type="xml">
+         <form string="Check Form">
+           <sheet>
+
+             <group>
+           <field name ="name" string="vehicel"/>
+           <field name="x" invisible="1"/>
+           <field name="licence" attrs="{'invisible': [('x', '=', False)]}"/>
+           <field name="chassisnumber" attrs="{'invisible': [('x', '=', False)]}"/>
+           <field name="vehicel_model" attrs="{'invisible': [('x', '=', False)]}"/>
+           <field name="color" attrs="{'invisible': [('x', '=', False)]}"/>
+           <field name="driver" attrs="{'invisible': [('x', '=', False)]}"/>
+
+
+
+           </group>
+         <group>
+           <field name="part_grid" >
+               <tree editable="bottom" default_order="serial asc">
+                 <field class="text-center" name="serial" string="Serial(SN)" />
+                 <field class="text-center" name="name1" string="Part name" />
+                 <field class="text-center" name="check_box" string="Checked(yes/no)" />
+                 <field class="text-center" name="description" string="Description" />
+
+               </tree>
+           </field>
+       </group>
+       <group>
+       <field name="created_user" />
+       <field name="check_date" />
+       <field name="signature" />
+
+     </group>
+         </sheet>
+         </form>
+     </field>
+ </record>
+
+ <record id="view_tree111" model="ir.ui.view">
+     <field name="name">view.tree111</field>
+     <field name="model">check.form</field>
+     <field name="arch" type="xml">
+         <tree string="Check Form">
+           <field name ="name"/>
+           <field name="chassisnumber" />
+           <field name="licence"/>
+           <field name="vehicel_model" />
+           <field name="color" />
+           <field name="driver" />
+
+
+
+         </tree>
+     </field>
+ </record>
+
+
+ <record id="action_fleet_check_form" model="ir.actions.act_window">
+     <field name="name">Check Form</field>
+     <field name="type">ir.actions.act_window</field>
+     <field name="res_model">check.form</field>
+     <field name="view_mode">tree,form</field>
+ </record>
+
+
+ <menuitem id="fleet_check_view" name="Check Form" parent="fleet.fleet_vehicles" sequence="8" groups="base.group_system" action="action_fleet_check_form"/>
+<!-- ............................ -->
+
+
+
+
+
+
+
+</odoo>
