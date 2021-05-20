@@ -5,7 +5,6 @@
     'name': 'customization in fleet',
     'summary': 'customization in fleet',
     'author': "Hadeel Mahmoud",
-    'website': "http://www.white-code.co.uk",
     'category': 'Fleet',
     'version': '14.0.0.2.0',
     'depends': [

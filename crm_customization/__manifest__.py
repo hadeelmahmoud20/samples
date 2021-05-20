@@ -5,7 +5,6 @@
     'name': 'customization for crm',
     'summary': 'customization in crm',
     'author': "Hadeel Mahmoud",
-    'website': "http://www.white-code.co.uk",
     'category': 'CRM',
     'version': '13.0.0.2.0',
     'depends': [
